@@ -51,7 +51,7 @@ clientSheet.read({ search: {whatsapp: user } }).then(function(data) {
 	console.log(data);
 	const userJson = JSON.parse(data);
 	if(isEmptyObject(userJson)) {
-		clientSheet.create({ name: "Bot", whatsapp: user }).then(function(data) {
+		(function(data) {
 			console.log(data);
 		}, function(err){
 			console.log(err);
